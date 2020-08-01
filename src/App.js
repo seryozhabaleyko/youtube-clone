@@ -1,11 +1,32 @@
 import React from 'react';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+
+import Header from './components/Header';
+import Sidebar from './components/Sidebar';
+import Videos from './components/Videos';
+import SearchPage from './components/SearchPage';
 
 function App() {
     return (
         <>
-            <header className="header">header</header>
-            <main className="main">main</main>
-            <footer className="footer">footer</footer>
+            <Router>
+                <Header />
+
+                <main className="main">
+                    <Sidebar />
+
+                    <Switch>
+                        <Route path="/search/:searchTerm">
+                            <SearchPage />
+                        </Route>
+                        <Route path="/" exact>
+                            <Videos />
+                        </Route>
+                    </Switch>
+                </main>
+            </Router>
+
+            {/* <footer className="footer">footer</footer> */}
         </>
     );
 }
