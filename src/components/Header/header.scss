@@ -1,0 +1,25 @@
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background-color: #fff;
+
+    &__right,
+    &__center,
+    &__left {
+        display: inline-flex;
+        align-items: center;
+    }
+
+    &__center {
+        width: 40%;
+    }
+
+    &__icon {
+        margin-right: 10px;
+    }
+}
