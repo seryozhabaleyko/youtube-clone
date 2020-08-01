@@ -1,0 +1,18 @@
+.search {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    border: 1px solid lightgray;
+
+    > input {
+        flex: 1;
+        border: none;
+    }
+
+    &__button-submit {
+        width: 50px !important;
+        background-color: #fafafa;
+        border-left: 1px solid lightgray;
+        color: gray;
+    }
+}
